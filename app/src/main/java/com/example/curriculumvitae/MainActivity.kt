@@ -63,12 +63,15 @@ class MainActivity : AppCompatActivity() {
 
     fun checkskills(seekbars: Map<String,Int>)
     { var counter=0
-        var i=0
+
+        var max=""
+        var maxv=80
         seekbars.forEach(){ entry ->
-            if (findViewById<SeekBar>(entry.value).progress > 80 )
-            {
-                Toast.makeText(this, "vous etes excellent en ${entry.key} ", Toast.LENGTH_SHORT).show()
-i++
+            if (findViewById<SeekBar>(entry.value).progress > maxv)
+            { max=entry.key
+                maxv=findViewById<SeekBar>(entry.value).progress
+
+
             }
 
             else if(findViewById<SeekBar>(entry.value).progress <=30 )
@@ -78,9 +81,11 @@ i++
             }
 
         }
-        if(counter==3)   { Toast.makeText(this, "Vous devez travailler vos skills ", Toast.LENGTH_SHORT).show()
-            i++}
-if(i==0){ Toast.makeText(this, "Vous Avez de bons skills! ", Toast.LENGTH_SHORT).show()
+        if (max!="")
+            Toast.makeText(this, "vous etes excellent en ${max} ", Toast.LENGTH_SHORT).show()
+        else if(counter==3)   { Toast.makeText(this, "Vous devez travailler vos skills ", Toast.LENGTH_SHORT).show()
+            }
+ else { Toast.makeText(this, "Vous Avez de bons skills! ", Toast.LENGTH_SHORT).show()
 
 }
     }

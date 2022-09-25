@@ -16,10 +16,10 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="154dp"
-            android:layout_height="204dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/pr" />
@@ -124,7 +124,7 @@
         <View
             android:id="@+id/view2"
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="2dp"
             android:layout_marginTop="8dp"
 
             android:background="@android:color/darker_gray"
